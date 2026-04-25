@@ -1,0 +1,34 @@
+ID,Название,Проект,Окружение ,Серьезность,Приоритет,Предусловия,Шаги воспроизведения,Фактический результат,Ожидаемый результат,Вложения 
+1,Статья блога отображается на французском языке вместо выбранного английского языка,,"Windows 10 Pro, Chrome 147.0.7727.56, 1920×1080",Minor,Средний,Открыт сайт https://www.vmedia.ca/en,"1. Открыть ссылку https://www.vmedia.ca/blog/en/super-ecran-nouveautes-doctobre/
+2. Обратить внимание на язык отображения статьи",1. Статья на французском языке при выбранном английском языке,1. Страница открывается на английском языке,
+2,При выбранном английском языке страницы  в Header отображается французский язык (FR),,"Windows 10 Pro, Chrome 147.0.7727.56, 1920×1080",Minor,Средний,Открыт сайт https://www.vmedia.ca/en,"1. Открыть ссылку 
+https://www.vmedia.ca/fr
+2. Обратить внимание на язык в Header страницы","1. В Header страницы отображается EN
+(См. вложение)",1. В Header страницы отображается FR,https://drive.google.com/file/d/1gVVhDIzNmPrhRWFn8M9Oh9QMsc1D5XxO/view?usp=sharing
+3,"Пропущена буква s в ссылке компонента Services
+",,"Android 15, 23117RA68G, Chrome 147.0.7727.50",Trivial,Средний,Открыт сайт https://www.vmedia.ca/,"1. Проскролить главную страницу вниз до footer страницы
+2. Нажать на ""Services"" ссылку в разделе Company","1. URL: https://www.vmedia.ca/service/
+(См. вложение)",1. URL: https://www.vmedia.ca/services/,https://drive.google.com/file/d/1kg067E6WLcNbSpFARSK2B-Jj42rBznPO/view?usp=sharing
+4,Отображается 404 путем перехода по ссылке на форум компании на главной странице,,"Windows 10 Pro, Chrome 147.0.7727.56, 1920×1080",Major,Высокий,Открыт сайт https://www.vmedia.ca/,"1. Проскролить главную страницу вниз до footer страницы
+2. Нажать на ""Forum"" ссылку в разделе Company",1. Отображается ошибка 404 Page not found,1. Отображается страница с форумом компании,
+5,GET-запрос бесконечно повторяется со статусом canceled,,"Windows 10 Pro, Chrome 147.0.7727.56, 1920×1080",Major,Высокий,"1. Открыт сайт https://www.vmedia.ca/
+2. Открыта вкладка Network в DevTools.
+Включена опция Preserve log","1.  Перезагрузить страницу.
+2. Зафиксировать Finish, Requests, DOMContentLoaded в нижней строке Network через минуту после загрузки
+3. Через 5 минут после начала загрузки повторно зафиксировать те же метрики
+4. Через 9 минут после начала загрузки повторно зафиксировать те же метрики","1. Метрики: 25 / 110 requests
+Finish: 58.54 s
+DOMContentLoaded: 2.54 s
+2. Метрики: 26 / 111 requests
+Finish: 5.2 min
+DOMContentLoaded: 2.54 s
+3. Метрики: 30 / 118 requests
+Finish: 9.8 min
+DOMContentLoaded: 2.54 s
+
+GET-запрос по URL повторяется многократно:
+https://www.googleadservices.com/pagead/conversion/990820065/wcm?cc=ZZ&dn=18553338269&cl=6k0KCISIw6kBEOHtutgD&ref=https%3A%2F%2Fwww.google.com%2F&dma=0&npa=0&ct_eid=2
+Каждый новый запрос получает статус (canceled). Сайт не завершает сетевую активность, запросы продолжают появляться (см. вложение)",1. Метрики Finish и Requests стабильны после загрузки страницы и не растут со временем.,https://drive.google.com/file/d/18DFvTD3VZNaJ2vnrOH28yi2-qQM1t6fL/view?usp=sharing
+6,"Не отцентрирована ""галочка"" в footer при выборе чекбокса ""Yes, I would like to receive updates from VMedia""",,"Android 15, 23117RA68G, Chrome 147.0.7727.50",Trivial,Средний,Открыт сайт https://www.vmedia.ca/,"1. Проскролить главную страницу вниз до footer страницы
+2. Нажать на ""галочку""  при выборе чекбокса ""Yes, I would like to receive updates from VMedia""","1. ""Галочка"" не отцентрована внутри области чекбокса
+(См. вложение)","1. ""Галочка"" отцентрована внутри области чекбокса",https://drive.google.com/file/d/1kaqCxYLutVqNiB_EUWHTLIGtnWlfNyHX/view?usp=sharing
