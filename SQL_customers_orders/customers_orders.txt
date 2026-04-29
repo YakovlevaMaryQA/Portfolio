@@ -1,0 +1,39 @@
+Решение:
+
+Вывести названия всех компаний, которые не выполнили заказ с 15.11.1996 – 18.02.1997.
+
+SELECT companyname FROM Customers 
+LEFT JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+WHERE Orders.OrderDate not BETWEEN '1996-11-15' and '1997-02-18';
+
+Вывести названия компаний поставщиков, которые находятся в México D.F.
+
+SELECT companyname FROM Customers 
+WHERE city='México D.F.';
+
+Вывести только те заказы, которые были оформлены с 12.12.1996 по 18.02.1997.
+
+SELECT orderid FROM Orders
+WHERE orderdate BETWEEN '1996-12-12' AND '1997-02-18';
+
+Вывести только тех заказчиков,  название компании которых начинаются с ‘An’.
+
+SELECT customerid FROM Customers
+WHERE companyname LIKE 'An%';
+
+Вывести названия компаний и заказы, которые они оформили, с суммой заказа более 17000. Использовать соединение таблиц.
+
+SELECT Customers.companyname, Orders.OrderID FROM Customers 
+INNER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+WHERE Orders.OrderSum>17000;
+
+Вывести следующие колонки: имя поставщика, сумма заказа. Результаты отсортировать по поставщикам в порядке убывания.
+
+SELECT customerid, ordersum FROM Orders
+order by ordersum DESC;
+
+Вывести следующие колонки: имя поставщика, дата заказа. Вывести  таким образом, чтобы все заказчики из таблицы 1 были показаны в таблице результатов.
+
+SELECT Customers.CustomerID, Orders.OrderDate FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID=Orders.CustomerID;
+
